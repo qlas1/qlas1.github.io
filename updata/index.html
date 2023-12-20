@@ -1,0 +1,145 @@
+﻿<?php
+require_once 'config.php';
+function serverStatus(){
+    $fp = @fsockopen(IP, PORT, $errno, $errstr, 2);
+
+    $Result = ($fp) ? 'rv-green' : 'rv-red';
+
+    echo $Result;
+}
+
+?>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- LAUNCH_ARGUMENT : /auth_ip:185.250.37.215 /auth_port:4500 /help_url_w:611 /use_nprotect:0 /help_url_h:625 /locale:Windows-1256 /country:ME /cash /commercial_shop /layout_dir:6 /layout_auto:0 /cash_url_w:800 /cash_url_h:600 /network.max_msg_process:1 /gift          -->
+    <!-- UPDATE_SERVER : 185.250.37.215 --> 	
+    <!-- UPDATE_COMPLETE_MESSAGE : Update Finished -->
+    <!-- ALREADY_UPDATE_MESSAGE :  Already updated -->
+    <!-- LAUNCHER_UPDATE_MESSAGE : Launcher has been updated. Please run launcher again. -->
+    <!-- MOVE_BOX_RECT : 0,0,960,100 -->
+    <!-- FILENAME_DECO : <span class="IT">Downloading : </span> %s (%d%s)  -->
+    <!-- LAUNCH_BUTTON_DECO :<a href="action://LAUNCH/" id="rv-play-on">PLAY</a> -->
+    <!-- START_BUTTON_DECO :<a href="action://START/" id="rv-play-off">WAIT</a> -->
+    <!-- LAUNCHER_SIZE : 960, 620 -->
+    <!-- PROGRESS2_WIDTH : 100 -->
+    <!-- PROGRESS2_HEIGHT : 1 -->
+    <!-- SINGLE_PROGRESSBAR -->
+    <!-- PROGRESS_BAR_DECO :    <div id="rv-prg-dyn" style="width: %d%%"></div> -->
+    <meta http-equiv="Content-Language" content="ar"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="no-cache" http-equiv="Pragma">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>arka5 SERVER - LAUNCHER [EN]</title>
+    <link rel="shortcut icon"  href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/ar.style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontawsome/css/all.css">
+
+	<style type="text/css">
+	.auto-style1 {
+		color: #FFFFFF;
+		font-size: xx-large;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.auto-style2 {
+		font-size: large;
+		color: #FFFFFF;
+	}
+	
+	.auto-style3 {
+		font-size: medium;
+	}
+	.auto-style5 {
+	border-width: 0px;
+}
+	
+	</style>
+	
+
+
+</head>
+<body style="text-align: center">
+<div id="top-upper">
+    <div id="lc-vers">
+      ARKA5.online [AR] &nbsp; &nbsp; &nbsp;  CLIENT VERSION : <span id="CLIENT_VERSION"> </span>&nbsp; &nbsp; &nbsp; LAUNCHER VERSION : <span id="LAUNCHER_VERSION">v1.31234</span>
+    </div>
+    <div id="lc-clomin">
+        <a href="action://DESTROY/" class="close-min-btn" title="إغلاق"><i class="fa fa-times"></i></a>
+        <a href="action://MINIMIZE/" class="close-min-btn" title="تصغير"><i class="fa fa-minus"></i></a>
+    </div>
+</div>
+<div id="content-wrapper">
+    <div id="rv-logo"></div>
+    <div id="rv-news" style="height: 230px">
+       
+      
+        
+    <br>
+	<br>	  
+		  
+     <h3 class="auto-style1" style="height: 15px">&nbsp; <br><br>
+	 
+	 <form class="auto-style3">
+	
+		
+         <a href="ar_mo.html" target="_self">
+	
+		
+        </a>
+
+   </form>
+
+	    </h3>
+			
+
+       
+
+       
+
+
+
+    </div>
+     <div id="rv-status">
+        <div id="rv-status-hld">
+            
+            
+            <div id="rv-name-logo"><strong><span class="auto-style2">
+				<img height="10" width="60" src="assets/img/launcher-parts2.png" /div class="auto-style2">&nbsp;&nbsp;&nbsp; حالة السيرفر&nbsp;&nbsp;&nbsp; </span>
+				<img height="10" width="60" src="assets/img/launcher-parts2.png" /div class="auto-style2"></strong>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <ul id="rv-btn-bar">
+        <li class="left mr-20"><a href="https://www.arka5.online" target="_blank"><i class="fas fa-home-alt"></i> الرئيسية </a></li>
+        <li class="left mr-20"><a href="action://CONFIG"><i class="fas fa-cog"></i> الإعدادات </a></li>
+        <li class="left mr-20"><a href="action://REPACKING"><i class="fas fa-laptop"></i> تحسين </a></li>
+        <li class="left"><a href="action://CHECK"><i class="fas fa-laptop-medical"></i> إصلاح </a></li>
+    </ul>
+    <div id="rv-st-line"></div>
+    <div id="rv-str-prg-wrp" style="width: 575px">
+        <div class="rv-play-wrp">
+            <span id="START_BUTTON"></span>
+            <span id="LAUNCH_BUTTON"><a href="action://START/" id="rv-play-off">WAIT</a></span>
+        </div>
+        <div class="rv-play-wrp">
+            <div id="rv-prg-msg"><span id="FILENAME"></span>
+                <span id="MESSAGE"></span></div>
+            <div id="rv-prg-bar">
+                <span id="PROGRESS2"></span>
+            </div>
+            <div id="rv-prg-per"><span id="PERCENTAGE_2"></span></div>
+        </div>
+    </div>
+
+
+</div>
+<!---->
+</body>
+</html>
